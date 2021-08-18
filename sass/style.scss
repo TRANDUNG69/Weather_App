@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito',
+    sans-serif;
+}
+.container{
+    width: 400px;
+    color: white;
+    margin: 50px auto;
+    background: linear-gradient(145deg, #2193b0, #6dd5ed);
+    border-radius: 5px;
+    font-size: 14px;
+    .main-section{
+        .search-bar{
+            position: relative;
+            width: 50%;
+            margin: 0 auto;
+            padding-top: 20px;
+            border-bottom: 1px solid white;
+            i{
+                margin-right: 5px;
+                position: absolute;
+                font-size: 20px;
+                left: -10%;
+            }
+            input#search-input{
+                color: white;
+                height: 20px;
+                outline: none;
+                border: none;
+                padding: 3px 3px 3px 20px;
+                background: transparent;
+                &::placeholder{
+                    color: rgb(206,206,206);
+                }
+            }
+        }
+        .infor-wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 50px;
+            .city-name{
+                font-size: 25px;
+                margin-bottom: 3px;
+            }
+            .weather-state{
+                font-size: 13px;
+            }
+            .temperature{
+                padding-left: 10%;
+                font-size: 80px;
+                font-weight: lighter;
+                text-align: center;
+                line-height: 1;
+            }   
+        }
+    }
+    .additional-section{
+        display: flex;
+        border-top: 1px solid white;
+        flex-direction: column;
+        font-size: 13px;
+        padding: 10px 20px;
+        .row{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 5px;
+            .item{
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
