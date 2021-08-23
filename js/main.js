@@ -18,7 +18,7 @@ const percent = "%";
 //         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${e.target.value}&appid=${APP_ID}&units=metric&lang=vi`)
 //         .then(async res =>{
 //             const data = await res.json();
-            // console.log('[search_input]', data);
+              // console.log('[search_input]', data);
 //             city_Name.innerHTML = data.name || DEFAULT_VALUE;
 //             weather_State.innerHTML = data.weather[0].description || DEFAULT_VALUE;
 //             weather_icon.setAttribute('src', `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
@@ -29,18 +29,17 @@ const percent = "%";
 //             wind_speed.innerHTML = (data.wind.speed * 3.6).toFixed(2) + speed || DEFAULT_VALUE;
 //         });
 // })
-// ! Cach 1
-
+// ! Cách 1
 document.addEventListener("DOMContentLoaded", function(){
     search_input.onchange = function(e){
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${e.target.value}&appid=${APP_ID}&units=metric&lang=vi`)
         .then(async function(res) {
             const data = await res.json();
             // Hàm lấy dữ liệu
-            console.log('[search_input]', data);
+            // console.log('[search_input]',data);
             city_Name.innerHTML = data.name || DEFAULT_VALUE;
             weather_State.innerHTML = data.weather[0].description || DEFAULT_VALUE;
-            weather_icon.setAttribute('src', `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
+            weather_icon.setAttribute('src',`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
             temperature.innerHTML = Math.round(data.main.temp) + degree || DEFAULT_VALUE;
             sunrise.innerHTML = moment.unix(data.sys.sunrise).format('H:mm') || DEFAULT_VALUE;
             sunset.innerHTML = moment.unix(data.sys.sunset).format('H:mm') || DEFAULT_VALUE;
@@ -49,4 +48,4 @@ document.addEventListener("DOMContentLoaded", function(){
         })
     }
 }, false)
-// ? Cach 2
+// ? Cách 2
