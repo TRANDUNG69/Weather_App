@@ -34,7 +34,9 @@ document.addEventListener("DOMContentLoaded", function(){
     search_input.onchange = function(e){
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${e.target.value}&appid=${APP_ID}&units=metric&lang=vi`)
         .then(async function(res) {
+            // Thực hiện hàm ko đồng bộ
             const data = await res.json();
+            // Await làm hoãn hàm không đồng bộ lại và lấy ra dl
             // Hàm lấy dữ liệu
             // console.log('[search_input]',data);
             city_Name.innerHTML = data.name || DEFAULT_VALUE;
